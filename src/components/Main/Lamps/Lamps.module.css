@@ -1,0 +1,30 @@
+
+.divan {
+}
+.divan-title {
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1.4rem;
+    padding-left: 10px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+.itemsWrapper {
+    display: grid;
+}
+@media(min-width: 576px) {
+    .itemsWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(min-width: 768px){
+    .itemsWrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+@media(min-width: 992px) {
+    .itemsWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

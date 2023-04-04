@@ -1,0 +1,34 @@
+
+.header-cart__link {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 3em;
+    right: -10px;
+    top: 5px;
+}
+.header-cart__link-ico:after {
+    content: "🛒";
+    color: black;
+    font-size: 1.3em;
+    vertical-align: sub;
+}
+.red {
+    color: red;
+}
+.header-cart__link sup {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    top: -0.9em;
+    margin-left: -0.4em;
+    padding-top: 0.3em;
+    background: #f43c33;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+}

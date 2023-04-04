@@ -1,0 +1,70 @@
+
+.navList {
+    position: relative;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+    transition: all 0.9s;
+}
+.navList li {
+    position: relative;
+}
+
+.navLink {
+    position: relative;
+    display: block;
+    padding: 20px 10px 20px 15px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: .95em;
+    color: #111;
+    transition: .2s all;
+    z-index: 1;
+}
+.subMenu a {
+    padding-left: 0;
+}
+.lastChild {
+    padding-bottom: 0;
+}
+.shopLink {
+    padding-right: 50px;
+}
+.shopLink:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: #ecf2f9;
+    z-index: 10;
+}
+.subMenu {
+    list-style: none;
+    background: #ecf2f9;
+}
+.collapseBtn {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    padding: 20px 20px 20px 30px;
+    right: 0px;
+    top: 30px;
+    z-index: 11;
+}
+.collapseBtn:after {
+    content: "﹀";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: all .3s;
+    z-index: 11;
+}
+.open:after {
+    transform: rotate(180deg);
+}

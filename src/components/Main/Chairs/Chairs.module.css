@@ -1,0 +1,32 @@
+
+.itemsWrapper {
+    display: grid;
+}
+.chairs {
+    background: #edefda;
+    padding-bottom: 20px;
+}
+.chairs-title {
+    margin-left: 10px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+.chairMb {
+    /*margin: 10px;*/
+}
+@media(min-width: 576px) {
+    .itemsWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(min-width: 768px){
+    .itemsWrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+@media(min-width: 992px) {
+    .itemsWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

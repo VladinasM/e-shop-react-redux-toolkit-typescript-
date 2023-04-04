@@ -1,0 +1,25 @@
+
+.badge {
+    top: 15px;
+    right: -5px;
+    position: absolute;
+    color: #fff;
+    z-index: 4;
+}
+.new,
+.sale,
+.hit {
+    font-size: 0.9em;
+    color: #fff;
+    padding: 2px 7px;
+    margin-bottom: 3px;
+}
+.new {
+    background-color: #099925;
+}
+.sale {
+    background-color: #f43c33;
+}
+.hit {
+    background-color: #dd9933;
+}

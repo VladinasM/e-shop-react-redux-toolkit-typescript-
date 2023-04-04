@@ -1,0 +1,37 @@
+
+.payments {
+    padding: 0 15px 20px 15px;
+}
+p {
+    line-height: 1.7;
+}
+.links {
+    margin-bottom: 1.7em;
+}
+.links a {
+    color: #3960ff;
+    text-decoration: underline;
+    display: inline-block;
+    margin-right: 2px;
+}
+.paymentImg {
+    width: 320px;
+    height: 100px;
+}
+.imgWrapper {
+    margin-bottom: 1em;
+}
+.finalText {
+    margin-bottom: 1.7em;
+}
+.title {
+    font-size: 1.625em;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 0.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.startText {
+    margin-bottom: 1.7em;
+}

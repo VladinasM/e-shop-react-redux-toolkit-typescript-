@@ -1,0 +1,66 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.item-wrapper{
+
+}
+.cart-item-img {
+    width: 80px;
+    height: 46px;
+}
+.property {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+.property span {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.plus-button,
+.minus-button
+{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 2px;
+    opacity: .7;
+}
+.plus-button {
+    right: 0;
+}
+.plus-button:before{
+    content: "+";
+}
+.minus-button:before{
+    content: "-";
+}
+.minus-button {
+    left: 0;
+}
+.input-wrapper {
+    position: relative;
+    max-width: 150px;
+}
+.input {
+    font-weight: 300;
+    border: 1px solid rgba(0,0,0, 0.3);
+    text-align: center;
+    outline: none;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #111;
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+.delete-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+{
+  "projectName": "bono-shop",
+  "meta": {
+    "type": "frontend"
+  },
+  "packageManager": "npm",
+  "hash": "a82f52ad"
+}

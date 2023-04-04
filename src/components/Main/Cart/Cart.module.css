@@ -1,0 +1,10 @@
+
+.cart-wrapper {
+    padding: 0 15px;
+}
+.cart-title {
+    margin-bottom: 20px;
+    font-size: 1.625em;
+    line-height: 1.1;
+    font-weight: 700;
+}

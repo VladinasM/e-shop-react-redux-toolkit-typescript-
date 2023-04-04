@@ -1,0 +1,13 @@
+.card {
+    display: flex;
+}
+.imgWrapper {
+    position: relative;
+}
+.imgWrapper img {
+    width: 150px;
+    height: 80px;
+}
+.favouritesSection{
+
+}

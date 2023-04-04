@@ -1,0 +1,11 @@
+.title {
+    font-size: 1.625em;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 0.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.profile {
+    padding: 0 15px 20px 15px;;
+}

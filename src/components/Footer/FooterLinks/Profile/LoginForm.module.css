@@ -1,0 +1,57 @@
+
+.email,
+.password{
+    width: 100%;
+    max-width: 460px;
+    padding: 0.575em 0.95em;
+    line-height: 1.5;
+    color: #111;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out;
+}
+label {
+    width: 100%;
+    font-size: .9em;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.emailWrapper,
+.passwordWrapper {
+    margin-bottom: 20px;
+}
+.rememberMe {
+    display: inline-block;
+    margin-right: 5px;
+}
+.formBtn {
+    cursor: pointer;
+    width: 100%;
+    max-width: 460px;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    background: #3960ff;
+    transition: all .3s;
+    text-decoration: none;
+}
+.rememberMeLabel {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.forgetLink {
+    color: #111;
+    text-decoration: underline;
+}
+.forgetLinkWrapper {
+    line-height: 1.7;
+    padding-top: 10px;
+    text-align: center;
+}

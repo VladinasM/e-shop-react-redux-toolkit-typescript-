@@ -1,0 +1,41 @@
+
+.burger-btn {
+    position: relative;
+    width: 24px;
+    height: 16px;
+    margin-right: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.burger-btn span {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+}
+.top{
+    top: 0px;
+
+}
+.mid{
+    top: 6px;
+}
+.bottom{
+    bottom: 0px;
+
+}
+.top.open {
+    transform: translateY(7px) rotate(45deg) translateZ(0);
+}
+.bottom.open {
+    transform: translateY(-7px) rotate(-45deg) translateZ(0);
+}
+.mid.open {
+    opacity: 0;
+}
+

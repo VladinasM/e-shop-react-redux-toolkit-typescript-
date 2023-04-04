@@ -1,0 +1,18 @@
+
+.title {
+    font-size: 1.625em;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 0.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.oferta {
+    padding: 0 15px 20px 15px;
+}
+h3{
+    font-size: 1.4375em;
+    line-height: 1.2;
+    margin: 2em 0 1em;
+    font-weight: 700;
+}

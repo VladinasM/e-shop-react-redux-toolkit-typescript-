@@ -1,0 +1,84 @@
+
+.footer {
+    padding: 50px 15px;
+    background: #f8f8f8;
+    font-size: .5rem;
+}
+.footer p {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #111;
+}
+.footer small {
+    font-size: 0.7rem;
+}
+
+.logoWrapper img {
+    width: 140px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.footerNav {
+    margin-bottom: 20px;
+}
+.navLink {
+    display: block;
+    color: #3960ff;
+    font-size: 12px;
+    margin: 0.2em 0;
+}
+.navTitle {
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 2.5rem;
+}
+.footerLinks a {
+    display: inline-block;
+    padding: 4px;
+    background-color: #fff;
+    margin: 0 3px;
+    width: 36px;
+    height: 36px;
+}
+.wordpressBlock {
+    margin-bottom: 2.5rem;
+}
+.copyright {
+    margin-bottom: 0;
+}
+
+@media(min-width: 768px) {
+    .footerInner {
+        font-size: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 40px;
+        max-width: 720px;
+        margin: 0 auto;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    .navTitle {
+        margin-top: 0;
+    }
+
+}
+@media(min-width: 992px){
+    .footerInner {
+        max-width: 960px;
+    }
+    .footerInner * {
+        font-size: 14px;
+    }
+}

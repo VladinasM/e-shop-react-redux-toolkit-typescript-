@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #111;
+}
+@font-face {
+    font-family: "wpshop-core";
+    src: url("./assets/fonts/wpshop-core.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+}
+*:before,
+*:after {
+    font-family: "wpshop-core", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+}

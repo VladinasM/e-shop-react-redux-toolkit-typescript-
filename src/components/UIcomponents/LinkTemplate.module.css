@@ -1,0 +1,18 @@
+
+.link-template{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 1rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #3960ff;
+}
+.link-template:hover {
+    border: 1px solid #3960ff;
+    background-color: #fff;
+    color: #3960ff;
+}

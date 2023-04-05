@@ -1,7 +1,8 @@
 
-.divan {
+.lamp {
+    padding-bottom: 30px;
 }
-.divan-title {
+.lamp-title {
     font-weight: 700;
     line-height: 1;
     font-size: 1.4rem;
@@ -21,6 +22,8 @@
     .itemsWrapper {
         padding-left: 45px;
         padding-right: 45px;
+        padding-bottom: 50px;
+        margin-bottom: 40px;
     }
 }
 @media(min-width: 992px) {

@@ -1,18 +1,23 @@
 
 .footer {
-    padding: 50px 15px;
+    padding: 50px 20px;
     background: #f8f8f8;
-    font-size: .5rem;
+    font-size: .9em;
 }
 .footer p {
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
-    font-size: 13px;
     color: #111;
 }
+.footerInfo:before {
+    content: "";
+    display: block;
+    width: 10em;
+    overflow: hidden;
+}
 .footer small {
-    font-size: 0.7rem;
+    font-size: 80%;
 }
 
 .logoWrapper img {
@@ -26,29 +31,44 @@
 .navLink {
     display: block;
     color: #3960ff;
-    font-size: 12px;
     margin: 0.2em 0;
 }
 .navTitle {
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 1.05em;
     margin-bottom: 1em;
 }
 .footerLinks {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 15px;
+    margin-top: 1rem;
     margin-bottom: 2.5rem;
 }
 .footerLinks a {
+    font-size: 1.3em;
     display: inline-block;
-    padding: 4px;
+    width: 2em;
+    height: 2em;
     background-color: #fff;
-    margin: 0 3px;
-    width: 36px;
-    height: 36px;
+    padding: 3px 0.1em 0.1em;
+    margin: 0 2px 4px 2px;
+    border-radius: 4px;
+    transition: all .3s;
+}
+.facebookLink:hover{
+    box-shadow: inset 0 0 0 1px #4267b2;
+}
+.vkLink:hover{
+    box-shadow: inset 0 0 0 1px #4a76a8;
+}
+.telegramLink:hover{
+    box-shadow: inset 0 0 0 1px #289fd9;;
+}
+.instaLink:hover{
+    box-shadow: inset 0 0 0 1px #d8478f;
+}
+.footerLinks a img {
+    padding: 0 0.2em;
 }
 .wordpressBlock {
     margin-bottom: 2.5rem;
@@ -58,27 +78,63 @@
 }
 
 @media(min-width: 768px) {
-    .footerInner {
-        font-size: 32px;
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        gap: 40px;
+    .innerWrapper {
         max-width: 720px;
         margin: 0 auto;
         padding-left: 45px;
         padding-right: 45px;
     }
+    .footerInner {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .footerLinks {
+        display: block;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
     .navTitle {
         margin-top: 0;
+    }
+    .footerWidget,
+    .footerNav {
+        margin: 0 20px;
+    }
+    .footerInfo{
+        max-width: 240px;
+    }
+    .wordpressBlock {
+        margin: 1rem 0;
+    }
+    .logoWrapper img {
+        margin-bottom: 10px;
     }
 
 }
 @media(min-width: 992px){
-    .footerInner {
+    .innerWrapper {
         max-width: 960px;
     }
-    .footerInner * {
-        font-size: 14px;
+    .footerInfo{
+        max-width: 380px;
+    }
+}
+@media(min-width: 1200px){
+    .innerWrapper {
+        max-width: 1190px;
+    }
+    .footerInfo{
+        max-width: 500px;
+    }
+}
+@media(min-width: 1400px){
+    .innerWrapper {
+        max-width: 1390px;
     }
 }

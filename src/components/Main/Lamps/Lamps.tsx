@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../Divans/Divan.module.css'
+import classes from '../Lamps/Lamps.module.css'
 import ProductItem from "../ProductItem/ProductItem";
 import lampVenice from '../../../assets/images/lamp/lamp-venice-500x500.jpg'
 import lampVulcano from '../../../assets/images/lamp/lamp-vulcano-500x500.jpg'
@@ -110,8 +110,8 @@ const DUMMY_LAMPS = [
 ]
 const Lamps = () => {
     return (
-        <section className={classes.divan}>
-            <h2 className={classes['divan-title']}>Свет</h2>
+        <section className={classes.lamp}>
+            <h2 className={classes['lamp-title']}>Свет</h2>
             <div className={classes.itemsWrapper}>
                 {DUMMY_LAMPS.map(lamp =>
                     <ProductItem key={lamp.id}

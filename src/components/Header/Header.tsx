@@ -18,35 +18,37 @@ const Header = () => {
 
     return (
         <header className={classes.header}>
-            <MenuBurger/>
-            <Link to='./' className={classes['img-wrapper']}>
-                <img src={logoImg}/>
-            </Link>
-            <CartMainPage/>
-            <div className={classes['header-mid']}>
-                <a href=""> <img src={facebookIcon} alt=""/></a>
-                <a href=""> <img src={vkIcon} alt=""/> </a>
-                <a href=""> <img src={telegramIcon} alt=""/> </a>
-                <a href=""> <img src={instaIcon} alt=""/> </a>
-            </div>
-            <div className={classes['header-bottom']}>
-                <div className={classes.phone}>
-                    <a href="tel:%2B74952002020">
-                        +7 495 200 20 20 <br/>
-                        <small>с 10:00 до 15:00</small>
-                    </a>
+            <div className={classes.headerInner}>
+                <MenuBurger/>
+                <Link to='./' className={classes.imgWrapper}>
+                    <img src={logoImg}/>
+                </Link>
+                <CartMainPage/>
+                <div className={classes.headerSocials}>
+                    <a href=""> <img src={facebookIcon} alt=""/></a>
+                    <a href=""> <img src={vkIcon} alt=""/> </a>
+                    <a href=""> <img src={telegramIcon} alt=""/> </a>
+                    <a href=""> <img src={instaIcon} alt=""/> </a>
                 </div>
-                <div className={classes['favourites-wrapper']}>
-                    <Link to='./favourites'
-                          className={`${classes['favourites']} ${!!totalFavourites && classes.active}`}>
-                        <sup>{totalFavourites}</sup>
-                    </Link>
-                    <Link to='./compare' className={`${classes['compare']} ${!!totalCompare && classes.active}`}>
-                        <sup>{totalCompare}</sup>
-                    </Link>
+                <div className={classes.headerBottom}>
+                    <div className={classes.phone}>
+                        <a href="tel:%2B74952002020">
+                            +7 495 200 20 20 <br/>
+                            <small>с 10:00 до 15:00</small>
+                        </a>
+                    </div>
+                    <div className={classes.favouritesWrapper}>
+                        <Link to='./favourites'
+                              className={`${classes.favourites} ${!!totalFavourites && classes.active}`}>
+                            <sup>{totalFavourites}</sup>
+                        </Link>
+                        <Link to='./compare' className={`${classes.compare} ${!!totalCompare && classes.active}`}>
+                            <sup>{totalCompare}</sup>
+                        </Link>
+                    </div>
                 </div>
+                <Navbar/>
             </div>
-            <Navbar/>
             <GoToTopOfPage/>
         </header>
     );

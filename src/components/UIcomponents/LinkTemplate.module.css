@@ -1,5 +1,4 @@
-
-.link-template{
+.linkTemplate{
     display: inline-block;
     font-weight: 400;
     font-size: 0.9rem;
@@ -10,9 +9,11 @@
     border: 1px solid transparent;
     border-radius: 4px;
     background-color: #3960ff;
+    transition: all .4s;
 }
-.link-template:hover {
+.linkTemplate:hover {
     border: 1px solid #3960ff;
     background-color: #fff;
+    box-shadow: inset 0 -4em 0 0 #fff;
     color: #3960ff;
 }

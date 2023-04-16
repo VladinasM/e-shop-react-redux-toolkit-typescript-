@@ -11,7 +11,7 @@ const MenuBurger = () => {
 
     return (
         <button onClick={burgerToggle}
-            className={classes['burger-btn']}
+            className={classes.burgerBtn}
             type="button"
             data-mdb-toggle="collapse"
             data-mdb-target="#collapseExample"

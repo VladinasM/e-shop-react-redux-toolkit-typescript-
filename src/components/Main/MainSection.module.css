@@ -1,0 +1,36 @@
+
+.mainSection {
+
+}
+@media(min-width: 576px){
+    .mainSection{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media(min-width: 768px){
+    .mainSection{
+        padding-left: 45px;
+        padding-right: 45px;
+        max-width: 720px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(min-width: 992px){
+    .mainSection{
+        min-height: 70vh;
+        max-width: 960px;
+    }
+}
+@media(min-width: 1200px){
+    .mainSection{
+        max-width: 1190px;
+    }
+}
+@media(min-width: 1400px){
+    .mainSection{
+        max-width: 1390px;
+    }
+}

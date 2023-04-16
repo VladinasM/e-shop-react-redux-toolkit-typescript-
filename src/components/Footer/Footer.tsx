@@ -2,10 +2,8 @@ import React from 'react';
 import classes from './Footer.module.css'
 import logo from '../../assets/icons/logo-4.png'
 import {NavLink} from "react-router-dom";
-import facebookIcon from "../../assets/icons/facebook.svg";
-import vkIcon from "../../assets/icons/vkIcon.svg";
-import telegramIcon from "../../assets/icons/telegramIcon.svg";
-import instaIcon from "../../assets/icons/instaIcon.svg";
+import SocialLinks from "../UIcomponents/SocialLinks";
+import {CHAIRS, DIVANS, FAQ, LAMPS, OFERTA, PAYMENTS, PROFILE, SHOP} from "../../consts/consts";
 
 const Footer = () => {
     return (
@@ -27,27 +25,24 @@ const Footer = () => {
                     </div>
                     <div className={classes.footerNav}>
                         <h4 className={classes.navTitle}>Помощь</h4>
-                        <NavLink className={classes.navLink} to='/payments'>Оплата заказа</NavLink>
-                        <NavLink className={classes.navLink} to='/oferta'>Публичная оферта</NavLink>
-                        <NavLink className={classes.navLink} to='/faq'>Вопросы и ответы</NavLink>
-                        <NavLink className={classes.navLink} to='/profile'>Профиль</NavLink>
-                        <NavLink className={classes.navLink} to='/payments'>Мои заказы</NavLink>
+                        <NavLink className={classes.navLink} to={PAYMENTS}>Оплата заказа</NavLink>
+                        <NavLink className={classes.navLink} to={OFERTA}>Публичная оферта</NavLink>
+                        <NavLink className={classes.navLink} to={FAQ}>Вопросы и ответы</NavLink>
+                        <NavLink className={classes.navLink} to={PROFILE}>Профиль</NavLink>
+                        <NavLink className={classes.navLink} to={PROFILE}>Мои заказы</NavLink>
                     </div>
                     <div className={classes.footerNav}>
                         <h4 className={classes.navTitle}>Разделы</h4>
-                        <NavLink className={classes.navLink} to='/payments'>Диваны</NavLink>
-                        <NavLink className={classes.navLink} to='/payments'>Стулья</NavLink>
-                        <NavLink className={classes.navLink} to='/payments'>Свет</NavLink>
-                        <NavLink className={classes.navLink} to='/payments'>Для офиса</NavLink>
-                        <NavLink className={classes.navLink} to='/payments'>На потолок</NavLink>
-                        <NavLink className={classes.navLink} to='/payments'>Настольные</NavLink>
+                        <NavLink className={classes.navLink} to={DIVANS}>Диваны</NavLink>
+                        <NavLink className={classes.navLink} to={CHAIRS}>Стулья</NavLink>
+                        <NavLink className={classes.navLink} to={LAMPS}>Свет</NavLink>
+                        <NavLink className={classes.navLink} to={LAMPS}>Для офиса</NavLink>
+                        <NavLink className={classes.navLink} to={LAMPS}>На потолок</NavLink>
+                        <NavLink className={classes.navLink} to={LAMPS}>Настольные</NavLink>
                     </div>
                     <div className={classes.footerWidget}>
                         <div className={classes.footerLinks}>
-                            <a className={classes.facebookLink} href=""> <img src={facebookIcon} alt=""/></a>
-                            <a className={classes.vkLink} href=""> <img src={vkIcon} alt=""/> </a>
-                            <a className={classes.telegramLink} href=""> <img src={telegramIcon} alt=""/> </a>
-                            <a className={classes.instaLink} href=""> <img src={instaIcon} alt=""/> </a>
+                            <SocialLinks/>
                         </div>
                         <p className={classes.wordpressBlock}>
                             Сайт работает на WordPress

@@ -1,0 +1,71 @@
+.topMenu :global(.active) {
+    opacity: 0.6;
+}
+.topMenu a:hover {
+    color: #f43c33;
+}
+.topMenu {
+    display: none;
+    font-size: .85em;
+    font-weight: 500;
+    flex: 1;
+
+}
+.topMenuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.topMenu ul li {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.topMenuList > li {
+    white-space: nowrap;
+}
+.linkToSubMenu {
+    color: #111;
+}
+.arrow:after {
+    content: "﹀";
+    margin-left: 0.5em;
+    opacity: .7;
+}
+.subMenuList {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    background: #fff;
+    box-shadow: 0 2px 45px rgba(178,165,105,.25);
+    z-index: 110;
+    transition: all .2s;
+}
+.subMenuList a {
+    display: inline-block;
+    padding: 15px;
+    white-space: nowrap;
+    color: #111;
+}
+.arrow:hover + .subMenuList,
+.subMenuList:hover{
+    visibility: visible;
+    height: 100px;
+}
+.act {
+    opacity: 0.6;
+}
+
+@media(min-width: 992px) {
+    .topMenu {
+        display: block;
+    }
+}

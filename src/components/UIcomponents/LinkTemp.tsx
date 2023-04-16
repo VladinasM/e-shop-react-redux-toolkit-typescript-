@@ -11,7 +11,7 @@ interface LinkTemplateProps {
 
 const LinkTemp: FC<LinkTemplateProps> = ({text, src, onClick}) => {
     return (
-        <Link onClick={onClick} to={src} className={classes['link-template']}>
+        <Link onClick={onClick} to={src} className={classes.linkTemplate}>
             {text}
         </Link>
     );

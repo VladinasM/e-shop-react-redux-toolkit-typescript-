@@ -109,6 +109,7 @@ const DUMMY_CHAIRS = [
         isInFavourite: false
     },
 ]
+
 const Chairs = () => {
     return (
         <div className={classes.chairs}>

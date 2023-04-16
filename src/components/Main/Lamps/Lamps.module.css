@@ -6,7 +6,6 @@
     font-weight: 700;
     line-height: 1;
     font-size: 1.4rem;
-    padding-left: 10px;
     padding-top: 20px;
     margin-bottom: 50px;
 }
@@ -19,11 +18,17 @@
     }
 }
 @media(min-width: 768px){
+    .lamp {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     .itemsWrapper {
-        padding-left: 45px;
-        padding-right: 45px;
         padding-bottom: 50px;
         margin-bottom: 40px;
+    }
+    .lamp-title {
+        font-size: 2rem;
+        margin-left: 20px;
     }
 }
 @media(min-width: 992px) {

@@ -2,6 +2,7 @@ import React, {FC, useEffect, useRef, useState} from 'react';
 import classes from './CartItem.module.css'
 import {useAppDispatch} from "../../../store/hooks";
 import {cartSliceActions, Item} from "../../../store/cartSlice";
+import {useSelector} from "react-redux";
 
 interface CartItemProps {
     item: Item
@@ -9,67 +10,57 @@ interface CartItemProps {
 
 const CartItem: FC<CartItemProps> = ({item}) => {
     const dispatch = useAppDispatch()
-    const [inputVal, setInputVal] = useState<number>(item.itemAmount)
+    const itemAmount = item.itemAmount
 
     const onIncrementItemAmount = () => {
-        setInputVal(prevState => +prevState + 1)
-        // dispatch(cartSliceActions.incrementItemAmount(item))
+        dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: itemAmount + 1}))
     }
     const onDeleteFromCart = () => {
         dispatch(cartSliceActions.deleteItemFromCart(item))
     }
     const onDecrementItemAmount = () => {
-        setInputVal(prevState => prevState - 1)
-        // dispatch(cartSliceActions.decrementItemAmount(item))
+        dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: itemAmount - 1}))
     }
     const onInputChange = (e: any) => {
-        setInputVal(e.target.value)
-        console.log('text')
-        setTimeout(() => {
-            dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: +inputVal}))
-        }, 300)
+        const val = e.target.value
+        if (val === '') {
+            console.log('empty')
+            return
+        }
+        dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: +val}))
     }
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: +inputVal}))
-    //     }, 300)
-    //
-    //     return () => {
-    //         clearTimeout(timer)
-    //     }
-    // }, [inputVal])
     return (
-        <div className={classes['item-wrapper']}>
-            <div className={classes['delete-btn-wrapper']}>
-                <img className={classes['cart-item-img']} src={item.imgSrc} alt=""/>
-                <button onClick={onDeleteFromCart} className={classes['delete-btn']}>×</button>
-            </div>
-            <div className={classes.property}>
-                <span>Товар:</span>
+        <tr className={classes.cartItem}>
+            <td className={classes.productThumbnail}>
+                <img className={classes.cartItemImg} src={item.imgSrc} alt=""/>
+            </td>
+            <td className={classes.productName} data-title="Товар">
                 {item.title}
-            </div>
-            <div className={classes.property}>
-                <span>Цена:</span>
-                {item.salePrice || item.price}
-            </div>
-            <div className={classes.property}>
-                <span>Количество:</span>
-                <div className={classes['input-wrapper']}>
+            </td>
+            <td className={classes.productPrice} data-title="Цена">
+                {item.salePrice || item.price}₽
+            </td>
+            <td className={classes.productQuantity} data-title="Количество">
+                <div className={classes.inputWrapper}>
                     <input className={classes.input}
-                           value={inputVal}
+                           value={itemAmount}
                            type="number"
                            onChange={onInputChange}
+                           min='0'
+                           step='1'
                     />
-                    <button onClick={onIncrementItemAmount} className={classes['plus-button']}></button>
-                    <button onClick={onDecrementItemAmount} className={classes['minus-button']}></button>
+                    <button onClick={onIncrementItemAmount} className={classes.plusButton}></button>
+                    <button onClick={onDecrementItemAmount} className={classes.minusButton}></button>
                 </div>
-            </div>
-            <div className={classes.property}>
-                <span>Итого:</span>
-                {item.sum}
-            </div>
-        </div>
+            </td>
+            <td className={classes.productSubtotal} data-title="Итого">
+                <strong>{item.sum}₽</strong>
+            </td>
+            <td className={classes.productRemove}>
+                <button onClick={onDeleteFromCart} className={classes.deleteBtn}>×</button>
+            </td>
+        </tr>
     );
 };
 

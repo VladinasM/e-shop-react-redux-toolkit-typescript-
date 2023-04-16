@@ -2,8 +2,12 @@
 .slider {
     height: 200px;
     margin-bottom: 20px;
+    width: 100vw;
+    max-width: 100vw;
+    margin-top: -30px;
+    margin-left: calc(50% - 50vw)!important;
 }
-.slider-control {
+.sliderControl {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -12,48 +16,53 @@
     background-size: 100% 100%;
     text-shadow: 0 0 3px rgba(0,0,0,.7);
 }
-.slider-control:after {
+.sliderControl:after {
     position: relative;
     top: -1rem;
     color: white;
     --mdb-carousel-control-icon-font-size: 3rem;
 }
 
-.carousel-img1,
-.carousel-img2,
-.carousel-img3{
+.carouselImg1,
+.carouselImg2,
+.carouselImg3{
     min-height: 200px;
     background-size: cover;
     background-position: center;
 }
-.carousel-img1 {
+.carouselImg1 {
     background-image: url("../../../assets/images/slider-divan-soho.jpg");
 }
-.carousel-img2 {
+.carouselImg2 {
     background-image: url("../../../assets/images/slider-office.jpg");
 }
-.carousel-img3 {
+.carouselImg3 {
     background-image: url("../../../assets/images/slider-spring-scaled.jpg");
 }
-.item-inner {
+.itemInner {
     padding-top: 2px;
     position: relative;
+    height: 100%;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
 }
-.item-title {
+.itemTitle {
     font-size: 1.1em;
     font-weight: 700;
 }
-.item-info {
+.itemInfo {
     margin-top: 20px;
     line-height: 1.6;
 }
-.item-title span,
-.item-info span{
+.itemTitle span,
+.itemInfo span{
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
@@ -61,7 +70,7 @@
     padding: 0.2em 0.5em;
     -webkit-box-decoration-break: clone;
 }
-.item-btn {
+.itemBtn {
     display: inline-block;
     margin-top: 20px;
     position: relative;
@@ -109,8 +118,18 @@
     background: black;
 }
 
+
 @media(min-width: 768px){
     .slider {
         min-height: 400px;
+    }
+    .itemTitle {
+        line-height: 1.3;
+        font-size: 1.8em;
+    }
+}
+@media(min-width: 992px){
+    .itemTitle {
+        font-size: 2em;
     }
 }

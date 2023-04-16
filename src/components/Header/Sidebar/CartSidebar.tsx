@@ -1,9 +1,9 @@
 import React from 'react';
 import {createPortal} from "react-dom";
 import classes from "./CartSidebar.module.css";
-import {useAppDispatch, useAppSelector} from "../../store/hooks";
-import {cartSliceActions, Item} from "../../store/cartSlice";
-import LinkTemp from "../UIcomponents/LinkTemp";
+import {useAppDispatch, useAppSelector} from "../../../store/hooks";
+import {cartSliceActions, Item} from "../../../store/cartSlice";
+import LinkTemp from "../../UIcomponents/LinkTemp";
 
 
 const CartSidebar = () => {

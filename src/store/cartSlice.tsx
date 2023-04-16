@@ -14,7 +14,6 @@ export type Item = {
     secondBadge?: string,
     itemAmount: number,
     sum: any,
-    isInFavourite: boolean
 }
 type TypeState = {
     items: Item[],
@@ -83,24 +82,24 @@ const cartSlice = createSlice({
         // },
         setAmountFromInput(state, action: PayloadAction<Item>) {
             const newItem = action.payload
-            const itemAmount = action.payload.itemAmount
+            const itemAmount = newItem.itemAmount
             const itemPrice = newItem.salePrice || newItem.price
             const existingItem = state.items.find(item => item.id === newItem.id)
-            if (!!existingItem) {
+            if (existingItem) {
+                state.totalSum = 0
+                state.totalItems = 0
                 if (itemAmount === 0) {
-                    state.totalSum -= itemPrice * existingItem.itemAmount
-                    state.totalItems -= existingItem.itemAmount
                     state.items = state.items.filter(item => item.id !== existingItem.id)
-                    return
-                }
-                console.log(itemAmount)
-                console.log(existingItem.itemAmount)
-                const resultAmount = itemAmount - existingItem.itemAmount
-                state.totalSum += itemPrice * resultAmount
-                state.totalItems += resultAmount
 
-                existingItem.itemAmount += itemAmount
-                existingItem.sum -= itemPrice * itemAmount
+                } else {
+                    existingItem.itemAmount = itemAmount
+                    existingItem.sum = itemPrice * itemAmount
+                }
+
+                state.items.forEach(item => {
+                    state.totalSum += (item.salePrice || item.price) * item.itemAmount
+                    state.totalItems += item.itemAmount
+                })
             }
         },
         openSidebar(state) {

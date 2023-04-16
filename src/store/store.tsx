@@ -2,13 +2,15 @@ import {configureStore} from "@reduxjs/toolkit";
 import {cartSliceReducer} from "./cartSlice";
 import {favouritesSliceReducer} from "./favouritesSlice";
 import {compareSliceReducer} from "./compareSlice";
+import {detailsSliceReducer} from "./detailsSlice";
 
 
 const store = configureStore({
     reducer: {
         cartSlice: cartSliceReducer,
         favouritesSlice: favouritesSliceReducer,
-        compareSlice: compareSliceReducer
+        compareSlice: compareSliceReducer,
+        detailsSlice: detailsSliceReducer
     }
 })
 export default store

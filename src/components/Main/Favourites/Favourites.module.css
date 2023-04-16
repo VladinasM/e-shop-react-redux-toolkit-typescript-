@@ -1,14 +1,42 @@
 
 .title {
-    font-size: 1.625em;
-    line-height: 1.1;
-    text-align: center;
-    margin-top: 0.8em;
-    margin-bottom: 20px;
     font-weight: 700;
+    line-height: 1;
+    font-size: 1.4rem;
+    padding-top: 20px;
+    text-align: center;
 }
 .info {
     color: #91a6ba;
     margin: 0 0 15px;
     padding-left: 20px;
+}
+.favourites {
+    padding-bottom: 30px;
+}
+
+.itemsWrapper {
+    display: grid;
+}
+
+@media(min-width: 576px) {
+    .itemsWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(min-width: 768px){
+    .favourites {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .title {
+        padding-top: 0;
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+}
+@media(min-width: 992px) {
+    .itemsWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

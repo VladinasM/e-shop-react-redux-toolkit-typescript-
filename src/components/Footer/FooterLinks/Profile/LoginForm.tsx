@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './LoginForm.module.css'
 import {NavLink} from "react-router-dom";
+import ButtonTemp from "../../../UIcomponents/ButtonTemp";
 
 const LoginForm = () => {
     return (
@@ -17,7 +18,7 @@ const LoginForm = () => {
                 <input className={classes.rememberMe} id='rememberMe' type="checkbox"/>
                 <span>Запомнить меня</span>
             </label>
-            <button className={classes.formBtn}>Войти</button>
+            <ButtonTemp text='Войти' cssClass={classes.formBtn}/>
             <p className={classes.forgetLinkWrapper}>
                 <NavLink className={classes.forgetLink} to='./lost-password'>Забыли свой пароль?</NavLink>
             </p>

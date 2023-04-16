@@ -18,8 +18,7 @@ const Navbar = () => {
                         data-mdb-target="#collapseSubMenu"
                         aria-expanded="false"
                         aria-controls="collapseExample"></button>
-                <li
-                    className={`${classes.shopLink} ${isSubMenuOpen && classes.shopLinkOpen}`}>
+                <li className={`${classes.shopLink} ${isSubMenuOpen && classes.shopLinkOpen}`}>
                     <NavLink className={classes.navLink} to='./shop'>Магазин</NavLink>
                     <ul id="collapseSubMenu"
                         className={`collapse ${classes.subMenu}`}>

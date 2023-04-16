@@ -1,8 +1,16 @@
-
+.footer :global(.active){
+    color: #111;
+}
 .footer {
     padding: 50px 20px;
     background: #f8f8f8;
     font-size: .9em;
+}
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
 }
 .footer p {
     box-sizing: border-box;
@@ -32,44 +40,18 @@
     display: block;
     color: #3960ff;
     margin: 0.2em 0;
+    transition: all .3s;
+}
+.navLink:hover {
+    transform: translateX(-3px) translateZ(0);
+    color: #f43c33;
 }
 .navTitle {
     font-weight: 700;
     font-size: 1.05em;
     margin-bottom: 1em;
 }
-.footerLinks {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-}
-.footerLinks a {
-    font-size: 1.3em;
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    background-color: #fff;
-    padding: 3px 0.1em 0.1em;
-    margin: 0 2px 4px 2px;
-    border-radius: 4px;
-    transition: all .3s;
-}
-.facebookLink:hover{
-    box-shadow: inset 0 0 0 1px #4267b2;
-}
-.vkLink:hover{
-    box-shadow: inset 0 0 0 1px #4a76a8;
-}
-.telegramLink:hover{
-    box-shadow: inset 0 0 0 1px #289fd9;;
-}
-.instaLink:hover{
-    box-shadow: inset 0 0 0 1px #d8478f;
-}
-.footerLinks a img {
-    padding: 0 0.2em;
-}
+
 .wordpressBlock {
     margin-bottom: 2.5rem;
 }

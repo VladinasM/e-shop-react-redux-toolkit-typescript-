@@ -1,0 +1,101 @@
+
+.searchForm {
+    display: none;
+    position: relative;
+}
+.searchFormLabel {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute!important;
+    width: 1px;
+    word-wrap: normal!important;
+}
+.loupe {
+    padding: 0.5em 0.8em;
+    background-color: transparent;
+    border: none;
+}
+.loupe:before {
+    content: "🔍";
+    font-size: 1.4em;
+    vertical-align: sub;
+}
+.loupe:hover:before {
+    color: #f43c33;
+}
+.form {
+    position: absolute;
+    width: 300px;
+    top: 110%;
+    left: 50%;;
+    transform: translate3d(-50%,50px,0);
+    opacity: 0;
+    transition: all .2s;
+    pointer-events: none;
+    z-index: 10;
+}
+.form label {
+    display: block;
+    margin: 0;
+}
+.form input {
+    margin: 0;
+    font-family: inherit;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0.375em 0.75em;
+    padding-right: 3em;
+    line-height: 1.5;
+    color: #111;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline-offset: -2px;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out;
+}
+.form input::placeholder {
+    color: rgba(17,17,17,.5);
+    opacity: 1;
+}
+.form input:focus {
+    outline: none;
+    border-color: #4d3bfe;
+}
+.form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3em;
+    color: #ced4da;
+    border: none;
+    cursor: pointer;
+    background: 0 0;
+}
+.form button:before {
+    content: "→";
+    font-size: 1.2em;
+    top: 0.2em;
+    transition: all .2s;
+}
+.form button:hover:before {
+    color: #3960ff;
+}
+.show {
+    transform: translate3d(-50%,-10px,0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media(min-width: 768px){
+    .searchForm {
+        display: block;
+    }
+}

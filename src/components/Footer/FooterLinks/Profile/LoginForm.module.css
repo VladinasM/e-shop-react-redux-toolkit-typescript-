@@ -1,8 +1,11 @@
 
+.loginForm {
+    max-width: 460px;
+    margin-bottom: 40px;
+}
 .email,
 .password{
     width: 100%;
-    max-width: 460px;
     padding: 0.575em 0.95em;
     line-height: 1.5;
     color: #111;
@@ -10,6 +13,14 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     transition: border-color .15s ease-in-out;
+    outline: none;
+}
+.email:focus,
+.password:focus {
+    color: #111;
+    background-color: #fff;
+    border-color: #4d3bfe;
+    outline: 0;
 }
 label {
     width: 100%;
@@ -39,17 +50,27 @@ label {
     border: 1px solid transparent;
     line-height: 1.5;
     background: #3960ff;
-    transition: all .3s;
+    transition: all .3s ease-in-out;
     text-decoration: none;
+}
+.formBtn:hover {
+    color: #3960ff;
+    background: #fff;
+    border: 1px solid #3960ff;
 }
 .rememberMeLabel {
     display: inline-block;
     margin-bottom: 15px;
 }
-.forgetLink {
+.rememberMeLabel span {
+    font-weight: 300;
+}
+.forgetLink,
+.forgetLink:hover{
     color: #111;
     text-decoration: underline;
 }
+
 .forgetLinkWrapper {
     line-height: 1.7;
     padding-top: 10px;

@@ -9,6 +9,7 @@ import divanMilan from '../../../assets/images/divan/divan-milan-500x289.jpg'
 import divanSoho from '../../../assets/images/divan/divan-soho-n2-500x290.jpg'
 import divanRedVine from '../../../assets/images/divan/divan-red-vine-500x274.jpg'
 import divanValencia from '../../../assets/images/divan/divan-valencia-n-500x230.jpg'
+import {useAppSelector} from "../../../store/hooks";
 
 const DUMMY_DIVANS = [
     {
@@ -100,7 +101,9 @@ const DUMMY_DIVANS = [
         badgeText: ''
     },
 ]
+
 const Divan = () => {
+    const items = useAppSelector(state => state.cartSlice.items)
     return (
         <section className={classes.divan}>
             <h2 className={classes['divan-title']}>Диваны</h2>
@@ -115,9 +118,10 @@ const Divan = () => {
                                  imgSrc={divan.imgSrc}
                                  variants={divan.variants}
                                  badgeText={divan.badgeText}
-                                 cssClass={''}
+                                 cssClass={classes.imgInner}
                     />)}
             </div>
+            {/*<DetailsPopup item={item}/>*/}
         </section>
     );
 };

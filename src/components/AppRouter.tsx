@@ -1,5 +1,5 @@
 import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom";
-import Main from "./Main/Main";
+import MainSection from "./Main/MainSection";
 import App from "../App";
 import Cart from "./Main/Cart/Cart";
 import Favourites from "./Main/Favourites/Favourites";
@@ -9,30 +9,44 @@ import Oferta from "./Footer/FooterLinks/Payments/Oferta";
 import Faq from "./Footer/FooterLinks/Faq/Faq";
 import Profile from "./Footer/FooterLinks/Profile/Profile";
 import Blog from "./Main/Blog/Blog";
+import Shop from "./Main/Shop/Shop";
+import {
+    BLOG,
+    CART,
+    CHAIRS,
+    COMPARE,
+    DIVANS, FAQ,
+    FAVOURITES, LAMPS, LOST_PASSWORD,
+    OFERTA,
+    PAYMENTS,
+    PRODUCT_CATEGORY, PROFILE,
+    ROOT,
+    SHOP
+} from "../consts/consts";
+import ProductCategory from "./Main/ProductCategory/ProductCategory";
 
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route>
-            <Route path='/' element={<App />} >
-                <Route path='/' element={<Main />}/>
-                <Route path='/cart' element={<Cart />}/>
-                <Route path='/favourites' element={<Favourites />}/>
-                <Route path='/shop' element={<Favourites />}/>
-                <Route path='/compare' element={<Compare />}/>
-                <Route path='/payments' element={<Payments />}/>
-                <Route path='/oferta' element={<Oferta />}/>
-                <Route path='/faq' element={<Faq />}/>
-                <Route path='/profile' element={<Profile />}/>
-                <Route path='/lost-password' element={<Profile />}/>
-                <Route path='/blog' element={<Blog />}/>
+            <Route path={ROOT} element={<App />} >
+                <Route path={ROOT} element={<MainSection />}/>
+                <Route path={CART} element={<Cart />}/>
+                <Route path={FAVOURITES} element={<Favourites />}/>
+                <Route path={SHOP} element={<ProductCategory />}/>
+                <Route path={PRODUCT_CATEGORY}>
+                    <Route path={DIVANS} element={<ProductCategory />}/>
+                    <Route path={CHAIRS} element={<ProductCategory />}/>
+                    <Route path={LAMPS} element={<ProductCategory />}/>
+                </Route>
+                <Route path={COMPARE} element={<Compare />}/>
+                <Route path={PAYMENTS} element={<Payments />}/>
+                <Route path={OFERTA} element={<Oferta />}/>
+                <Route path={FAQ} element={<Faq />}/>
+                <Route path={PROFILE} element={<Profile />}/>
+                <Route path={LOST_PASSWORD} element={<Profile />}/>
+                <Route path={BLOG} element={<Blog />}/>
             </Route>
-            {/*<Route path='/main/m' element={<Main />}/>*/}
-            {/*<Route path='/home' element={<Home />} />*/}
-            {/*<Route path='/converter' element={<Converter />} />*/}
-            {/*/!*<Route path='/cart' element={<Cart />} />*!/*/}
-            {/*<Route path='/favourites' element={<Converter />} />*/}
-            {/*<Route path='/favourites' element={<Converter />} />*/}
         </Route>
     )
 )

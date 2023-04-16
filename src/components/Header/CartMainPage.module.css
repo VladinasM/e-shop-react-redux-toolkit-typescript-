@@ -1,29 +1,32 @@
 
-.header-cart__link {
+.headerCartLink {
     background-color: transparent;
     border: none;
-    position: relative;
+    position: absolute;
     display: inline-block;
     text-decoration: none;
     font-size: 1em;
     border-radius: 3em;
-    right: -10px;
+    right: 20px;
     top: 5px;
 }
-.header-cart__link-ico:after {
+.headerCartLinkIco:after {
     content: "🛒";
     color: black;
     font-size: 1.3em;
     vertical-align: sub;
 }
+.headerCartLinkIco:hover:after {
+    color: #f43c33;
+}
 .red {
     color: red;
 }
-.header-cart__link sup {
+.headerCartLink sup {
     display: inline-block;
+    position: absolute;
     width: 1.5em;
     height: 1.5em;
-    top: -0.9em;
     margin-left: -0.4em;
     padding-top: 0.3em;
     background: #f43c33;
@@ -31,4 +34,11 @@
     text-align: center;
     line-height: 1;
     border-radius: 50%;
+}
+@media(min-width: 768px){
+    .headerCartLink {
+        position: relative;
+        top: 50%;
+        right: -10px;
+    }
 }

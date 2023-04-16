@@ -1,15 +1,16 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
-import Converter from "../Converter";
 import Slider from "./Slider/Slider";
 import Divan from "./Divans/Divan";
 import DivanTwoInRow from "./Divans/DivanTwoInRow";
 import Chairs from "./Chairs/Chairs";
 import Lamps from "./Lamps/Lamps";
+import classes from './MainSection.module.css'
+import DetailsPopup from "./DetailsPopup/DetailsPopup";
 
-const Main = () => {
+const MainSection = () => {
     return (
-        <main>
+        <main className={classes.mainSection}>
             <Slider/>
             <Divan/>
             {/*<DivanTwoInRow/>*/}
@@ -19,4 +20,5 @@ const Main = () => {
     );
 };
 
-export default Main;
+// @ts-ignore
+export default MainSection

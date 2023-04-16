@@ -23,6 +23,7 @@ body {
     font-size: 14px;
     color: #111;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 @media(min-width: 768px){

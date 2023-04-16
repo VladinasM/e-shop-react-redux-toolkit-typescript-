@@ -1,5 +1,5 @@
 import React from 'react';
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import {Item} from "./cartSlice";
 
 type TypeState = {
@@ -25,6 +25,10 @@ const favouritesSlice = createSlice({
                 state.items = state.items.filter(item => item.id !== newItem.id)
                 state.totalFavouritesItems--
             }
+        },
+        removeAll(state){
+            state.items = []
+            state.totalFavouritesItems = 0
         }
     }
 })

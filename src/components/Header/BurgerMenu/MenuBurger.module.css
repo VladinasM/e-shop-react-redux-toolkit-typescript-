@@ -1,15 +1,16 @@
 
-.burger-btn {
-    position: relative;
+.burgerBtn {
+    position: absolute;
     width: 24px;
     height: 16px;
-    margin-right: 20px;
+    left: 20px;
+    top: 10px;
     padding: 0;
     border: none;
     background-color: transparent;
 }
 
-.burger-btn span {
+.burgerBtn span {
     display: inline-block;
     position: absolute;
     left: 0;
@@ -37,5 +38,17 @@
 }
 .mid.open {
     opacity: 0;
+}
+
+@media(min-width: 768px) {
+    .burgerBtn {
+        left: 20px;
+        top: calc(50% - 8px);
+    }
+}
+@media(min-width: 992px) {
+    .burgerBtn {
+        display: none;
+    }
 }
 

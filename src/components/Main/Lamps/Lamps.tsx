@@ -108,6 +108,7 @@ const DUMMY_LAMPS = [
         isInFavourite: false
     },
 ]
+
 const Lamps = () => {
     return (
         <section className={classes.lamp}>

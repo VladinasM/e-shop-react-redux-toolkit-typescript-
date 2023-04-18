@@ -1,10 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {Item} from "./cartSlice";
 
-type CompareItem = {
-    id: number,
-}
+
 type TypeState = {
-    items: CompareItem[],
+    items: Item[],
     totalCount: number
 }
 

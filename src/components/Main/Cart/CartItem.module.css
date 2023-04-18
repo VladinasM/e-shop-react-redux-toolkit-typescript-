@@ -1,7 +1,4 @@
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
+
 .cartItem {
     position: relative;
 }
@@ -24,50 +21,7 @@ input::-webkit-inner-spin-button {
 .productSubtotal {
 
 }
-.plusButton,
-.minusButton
-{
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 5px;
-    opacity: .7;
-}
-.plusButton {
-    right: 0;
-}
-.plusButton:before{
-    content: "+";
-}
-.minusButton:before{
-    content: "-";
-}
-.minusButton {
-    left: 0;
-}
-.plusButton:hover:before,
-.minusButton:hover:before
-{
-    color: #4d3bfe;
-}
-.inputWrapper {
-    position: relative;
-    display: inline-block;
-    max-width: 150px;
-}
-.input {
-    font-weight: 400;
-    border: 1px solid rgba(0,0,0, 0.3);
-    text-align: center;
-    width: 100%;
-    padding: 0.35em 2em;
-}
-.input:focus {
-    color: #111;
-    background-color: #fff;
-    border-color: #4d3bfe;
-    outline: 0;
-}
+
 .deleteBtn {
     background-color: transparent;
     position: absolute;
@@ -98,9 +52,6 @@ input::-webkit-inner-spin-button {
     .cartItem td {
         display: table-cell;
         text-align: center;
-    }
-    .inputWrapper {
-        max-width: 111px;
     }
     .deleteBtn {
         top: 18px;

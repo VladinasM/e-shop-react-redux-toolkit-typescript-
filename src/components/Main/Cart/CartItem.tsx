@@ -3,20 +3,22 @@ import classes from './CartItem.module.css'
 import {useAppDispatch} from "../../../store/hooks";
 import {cartSliceActions, Item} from "../../../store/cartSlice";
 import {useSelector} from "react-redux";
+import ItemAmountInput from "./ItemAmountInput";
+import {ReactJSXElement} from "@emotion/react/types/jsx-namespace";
 
 interface CartItemProps {
     item: Item
 }
 
-const CartItem: FC<CartItemProps> = ({item}) => {
+const CartItem:FC<CartItemProps> = ({item}) => {
     const dispatch = useAppDispatch()
     const itemAmount = item.itemAmount
 
-    const onIncrementItemAmount = () => {
-        dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: itemAmount + 1}))
-    }
     const onDeleteFromCart = () => {
         dispatch(cartSliceActions.deleteItemFromCart(item))
+    }
+    const onIncrementItemAmount = () => {
+        dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: itemAmount + 1}))
     }
     const onDecrementItemAmount = () => {
         dispatch(cartSliceActions.setAmountFromInput({...item, itemAmount: itemAmount - 1}))
@@ -42,17 +44,12 @@ const CartItem: FC<CartItemProps> = ({item}) => {
                 {item.salePrice || item.price}₽
             </td>
             <td className={classes.productQuantity} data-title="Количество">
-                <div className={classes.inputWrapper}>
-                    <input className={classes.input}
-                           value={itemAmount}
-                           type="number"
-                           onChange={onInputChange}
-                           min='0'
-                           step='1'
-                    />
-                    <button onClick={onIncrementItemAmount} className={classes.plusButton}></button>
-                    <button onClick={onDecrementItemAmount} className={classes.minusButton}></button>
-                </div>
+                <ItemAmountInput
+                    item={item}
+                    onIncrementItemAmount={onIncrementItemAmount}
+                    onDecrementItemAmount={onDecrementItemAmount}
+                    onInputChange={onInputChange}
+                />
             </td>
             <td className={classes.productSubtotal} data-title="Итого">
                 <strong>{item.sum}₽</strong>

@@ -16,6 +16,7 @@ const MainSection = () => {
             {/*<DivanTwoInRow/>*/}
             <Chairs />
             <Lamps/>
+            <DetailsPopup/>
         </main>
     );
 };

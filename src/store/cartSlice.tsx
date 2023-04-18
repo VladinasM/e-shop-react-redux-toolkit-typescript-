@@ -13,7 +13,7 @@ export type Item = {
     badgeText?: string,
     secondBadge?: string,
     itemAmount: number,
-    sum: any,
+    sum?: any,
 }
 type TypeState = {
     items: Item[],
@@ -34,29 +34,19 @@ const cartSlice = createSlice({
     reducers: {
         addItemToCart(state, action: PayloadAction<Item>) {
             const newItem = action.payload
+            const amount = newItem.itemAmount || 1
             const itemPrice = newItem.salePrice || newItem.price
             const existingItem = state.items.find(item => item.id === newItem.id)
-            state.totalSum += itemPrice
-            state.totalItems++
+            state.totalSum += itemPrice * amount
+            state.totalItems += amount
             state.sideBarIsOpen = true
             if (!existingItem) {
-                state.items.push({...newItem, itemAmount: 1, sum: itemPrice})
+                state.items.push({...newItem, itemAmount: amount, sum: itemPrice * amount})
             } else {
-                existingItem.itemAmount++
-                existingItem.sum += itemPrice
+                existingItem.itemAmount += amount
+                existingItem.sum += itemPrice * amount
             }
         },
-        // incrementItemAmount(state, action: PayloadAction<Item>) {
-        //     const newItem = action.payload
-        //     const itemPrice = newItem.salePrice || newItem.price
-        //     const existingItem = state.items.find(item => item.id === newItem.id)
-        //     state.totalSum += itemPrice
-        //     state.totalItems++
-        //     if (!!existingItem) {
-        //         existingItem.itemAmount++
-        //         existingItem.sum += itemPrice
-        //     }
-        // },
         deleteItemFromCart(state, action: PayloadAction<Item>) {
             const newItem = action.payload
             const itemPrice = newItem.salePrice || newItem.price
@@ -67,19 +57,6 @@ const cartSlice = createSlice({
                 state.items = state.items.filter(item => item.id !== existingItem.id)
             }
         },
-        // decrementItemAmount(state, action: PayloadAction<Item>) {
-        //     const newItem = action.payload
-        //     const itemPrice = newItem.salePrice || newItem.price
-        //     const existingItem = state.items.find(item => item.id === newItem.id)
-        //     state.totalSum -= itemPrice
-        //     state.totalItems--
-        //     if (existingItem && existingItem.itemAmount === 1) {
-        //         state.items = state.items.filter(item => item.id !== existingItem.id)
-        //     } else if (existingItem && existingItem.itemAmount > 1) {
-        //         existingItem.itemAmount--
-        //         existingItem.sum -= itemPrice
-        //     }
-        // },
         setAmountFromInput(state, action: PayloadAction<Item>) {
             const newItem = action.payload
             const itemAmount = newItem.itemAmount

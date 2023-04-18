@@ -59,7 +59,7 @@ const ProductCategory: FC<TypeProps> = (props) => {
     return (
         <section className={mainSection.mainSection}>
             <div className={classes.category}>
-                <h2 className={classes.categoryTitle}>title</h2>
+                <h2 className={classes.categoryTitle}>Магазин</h2>
                 <p>Отображение {}</p>
                 <select className={classes.select} name="" id="">
                     <option value="">Исходная сортировка</option>

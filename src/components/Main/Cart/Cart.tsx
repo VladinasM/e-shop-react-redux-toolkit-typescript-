@@ -9,7 +9,6 @@ import ButtonTemp from "../../UIcomponents/ButtonTemp";
 
 const Cart = () => {
     const {items, totalSum} = useAppSelector(state => state.cartSlice)
-    console.log(totalSum)
 
     const onSubmitHandler = (e: any) => {
         e.preventDefault()

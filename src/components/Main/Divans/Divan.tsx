@@ -121,7 +121,6 @@ const Divan = () => {
                                  cssClass={classes.imgInner}
                     />)}
             </div>
-            {/*<DetailsPopup item={item}/>*/}
         </section>
     );
 };

@@ -5,13 +5,14 @@ import classes from './LinkTemplate.module.css'
 interface LinkTemplateProps {
     text: string,
     src: string,
+    cssClass?: string,
     onClick?: () => void
 }
 
 
-const LinkTemp: FC<LinkTemplateProps> = ({text, src, onClick}) => {
+const LinkTemp: FC<LinkTemplateProps> = ({text, src, onClick, cssClass}) => {
     return (
-        <Link onClick={onClick} to={src} className={classes.linkTemplate}>
+        <Link onClick={onClick} to={src} className={`${classes.linkTemplate} ${cssClass}`}>
             {text}
         </Link>
     );

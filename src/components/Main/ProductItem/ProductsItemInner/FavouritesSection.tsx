@@ -16,7 +16,7 @@ const FavouritesSection:FC<ProductItemProps> = (props) => {
         dispatch(compareSliceActions.toggleCompare(item))
     }
     const onOpenDetails = () => {
-        dispatch(detailsSliceActions.openDetails())
+        dispatch(detailsSliceActions.openDetails(item))
     }
     return (
         <div className={classes.favouritesWrapper}>

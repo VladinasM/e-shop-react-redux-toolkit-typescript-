@@ -10,7 +10,7 @@ interface LinkTemplateProps {
 
 const ButtonTemp: FC<LinkTemplateProps> = ({text, onClick, cssClass}) => {
     return (
-        <button onClick={onClick} className={classes.linkTemplate + ' ' + cssClass}>
+        <button onClick={onClick} className={`${classes.linkTemplate} ${cssClass}`}>
             {text}
         </button>
     );

@@ -3,9 +3,9 @@ import divanForest from "../assets/images/divan-green-n-500x301.jpg";
 
 export type Item = {
     id: number,
-    type: string,
     title: string,
-    variants: number,
+    article: string,
+    category: string
     color?: string,
     price: number,
     salePrice?: any,
@@ -14,6 +14,7 @@ export type Item = {
     secondBadge?: string,
     itemAmount: number,
     sum?: any,
+    info?: any
 }
 type TypeState = {
     items: Item[],

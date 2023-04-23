@@ -3,6 +3,7 @@ import classes from './CartMainPage.module.css'
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import CartSidebar from "./Sidebar/CartSidebar";
 import {cartSliceActions} from "../../store/cartSlice";
+import DetailsPopup from "../Main/DetailsPopup/DetailsPopup";
 
 const CartMainPage = () => {
     const dispatch = useAppDispatch()
@@ -22,6 +23,7 @@ const CartMainPage = () => {
                 <sup>{totalItems}</sup>
             </button>
             <CartSidebar/>
+            <DetailsPopup/>
         </>
     );
 };

@@ -3,7 +3,7 @@ import classes from './Footer.module.css'
 import logo from '../../assets/icons/logo-4.png'
 import {NavLink} from "react-router-dom";
 import SocialLinks from "../UIcomponents/SocialLinks";
-import {CHAIRS, DIVANS, FAQ, LAMPS, OFERTA, PAYMENTS, PROFILE, SHOP} from "../../consts/consts";
+import {VENT_SYSTEM, SENSOR, FAQ, VENTILATOR, OFERTA, PAYMENTS, PROFILE, SHOP} from "../../consts/consts";
 
 const Footer = () => {
     return (
@@ -33,12 +33,12 @@ const Footer = () => {
                     </div>
                     <div className={classes.footerNav}>
                         <h4 className={classes.navTitle}>Разделы</h4>
-                        <NavLink className={classes.navLink} to={DIVANS}>Диваны</NavLink>
-                        <NavLink className={classes.navLink} to={CHAIRS}>Стулья</NavLink>
-                        <NavLink className={classes.navLink} to={LAMPS}>Свет</NavLink>
-                        <NavLink className={classes.navLink} to={LAMPS}>Для офиса</NavLink>
-                        <NavLink className={classes.navLink} to={LAMPS}>На потолок</NavLink>
-                        <NavLink className={classes.navLink} to={LAMPS}>Настольные</NavLink>
+                        <NavLink className={classes.navLink} to={SENSOR}>Диваны</NavLink>
+                        <NavLink className={classes.navLink} to={VENT_SYSTEM}>Стулья</NavLink>
+                        <NavLink className={classes.navLink} to={VENTILATOR}>Свет</NavLink>
+                        <NavLink className={classes.navLink} to={VENTILATOR}>Для офиса</NavLink>
+                        <NavLink className={classes.navLink} to={VENTILATOR}>На потолок</NavLink>
+                        <NavLink className={classes.navLink} to={VENTILATOR}>Настольные</NavLink>
                     </div>
                     <div className={classes.footerWidget}>
                         <div className={classes.footerLinks}>

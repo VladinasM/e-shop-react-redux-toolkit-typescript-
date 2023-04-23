@@ -1,0 +1,82 @@
+[
+  {
+    "id": 17,
+    "title": "Вентилятор канальный круглый V(AC1/D)- 200 (пластиковый корпус) (0,136 кВт; 0,62А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1d-200-plastikovyj-korpus-0136-kvt-062a",
+    "price": 11470,
+    "salePrice": 8602,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-kruglij-naveka-v-200-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 18,
+    "title": "Вентилятор канальный круглый V(AC1/Ds)- 200 (пластиковый корпус) (0,10 кВт; 0,48А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1ds-200-plastikovyj-korpus-010-kvt-048a",
+    "price": 11210,
+    "salePrice": 8407,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-kruglij-naveka-v-200-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+},
+  {
+    "id": 19,
+    "title": "Вентилятор канальный круглый V(AC1/D)- 160 Compact (компактный МЕТАЛ. корпус) (0,08 кВт; 0,38А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1d-160-compact-kompaktnyj-metal-korpus-008-kvt-038a",
+    "price": 10460,
+    "salePrice": 7845,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-compact-160mm-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+ },
+  {
+    "id": 20,
+    "title": "Вентилятор канальный круглый V(AC1/D)- 160 (пластиковый корпус) (0,08 кВт; 0,38А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1d-160-plastikovyj-korpus-008-kvt-038a",
+    "price": 9650,
+    "salePrice": 7237,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-kruglij-naveka-v-160-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 21,
+    "title": "Вентилятор канальный круглый V(AC1/D)- 125 Compact (компактный МЕТАЛ. корпус) (0,07 кВт; 0,32А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1d-125-compact-kompaktnyj-metal-korpus-007-kvt-032a",
+    "price": 9290,
+    "salePrice": 6967,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-compact-100mm-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 22,
+    "title": "Вентилятор канальный круглый V(AC1/D)- 100 Compact (компактный МЕТАЛ. корпус) (0,07 кВт; 0,32А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1d-100-compact-kompaktnyj-metal-korpus-007-kvt-032a",
+    "price": 9070,
+    "salePrice": 6802,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-compact-100mm-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 23,
+    "title": "Круглый канальный вентилятор BDTX 160-A",
+    "article": "kruglyj-kanalnyj-ventilyator-bdtx-160-a",
+    "price": 8538,
+    "salePrice": 6403,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/bdtx-100-1-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 24,
+    "title": "Вентилятор канальный круглый V(AC1/D)- 125 (пластиковый корпус) (0,07 кВт; 0,32А)",
+    "article": "ventilyator-kanalnyj-kruglyj-vac1d-125-plastikovyj-korpus-007-kvt-032a",
+    "price": 8110,
+    "salePrice": 6082,
+    "category": "Вентиляторы канальные круглые, Вентиляторы",
+    "imgSrc": "/src/assets/images/ventilator/ventilator-kanalnij-kruglij-naveka-v-125-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  }
+]

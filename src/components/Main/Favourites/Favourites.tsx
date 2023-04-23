@@ -23,8 +23,6 @@ const Favourites = () => {
                         items.map(item =>
                             <ProductItem id={item.id}
                                          key={item.id}
-                                         type={item.type}
-                                         variants={item.variants}
                                          title={item.title}
                                          price={item.price}
                                          salePrice={item.salePrice}

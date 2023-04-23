@@ -11,6 +11,7 @@ import ItemAmountInput from "../Cart/ItemAmountInput";
 const DetailsPopup = () => {
     const dispatch = useAppDispatch()
     const {isOpen, currentItem} = useAppSelector(state => state.detailsSlice)
+    console.log(currentItem)
 
     const onAddHandler = () => {
         dispatch(cartSliceActions.addItemToCart(currentItem))
@@ -68,10 +69,7 @@ const DetailsPopup = () => {
                                             {currentItem.price}₽
                                         </div>
                                     </div>
-                                    <div className={classes.info}>
-                                        Европейский дизайн модели позволит создать неповторимую атмосферу уюта и тепла в
-                                        вашем доме, при этом добавляя роскоши к интерьеру.
-                                    </div>
+                                    {currentItem.info && <div className={classes.info}>{currentItem.info}</div>}
                                     <form onSubmit={onSubmitHandler}>
                                         <div className={classes.formInner}>
                                             <ItemAmountInput
@@ -87,8 +85,8 @@ const DetailsPopup = () => {
                                         </div>
                                     </form>
                                     <div>
-                                        Артикул: D-KUBA <br/>
-                                        Категория: Диваны
+                                        Артикул: {currentItem.article} <br/>
+                                        Категория: {currentItem.category}
                                     </div>
                                 </div>
                             </div>

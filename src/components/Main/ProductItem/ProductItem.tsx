@@ -1,27 +1,25 @@
-import React, {FC, PropsWithChildren, useState} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import classes from './ProductItem.module.css'
 import ProductItemBtn from "./ProductsItemInner/ProductItemBtn";
 import FavouritesSection from "./ProductsItemInner/FavouritesSection";
 import Badge from "./ProductsItemInner/Badge";
 import {Link} from "react-router-dom";
-import {createPortal} from "react-dom";
-import DetailsPopup from "../DetailsPopup/DetailsPopup";
 
 export interface ProductItemProps extends PropsWithChildren {
-    id: number,
-    type: string,
-    variants: number,
-    title: string,
-    color?: string,
-    price: number,
-    salePrice?: any,
-    imgSrc: string,
-    badgeText?: string,
-    secondBadge?: string,
-    cssClass?: string
+    // id: number,
+    // type: string,
+    // variants: number,
+    // title: string,
+    // color?: string,
+    // price: number,
+    // salePrice?: any,
+    // imgSrc: string,
+    // badgeText?: string,
+    // secondBadge?: string,
+    // cssClass?: string
 }
 
-const ProductItem: FC<ProductItemProps> = (props) => {
+const ProductItem = (props:any) => {
     const cssClass = props.cssClass
     return (
         <article className={classes.item + ' ' + cssClass}>
@@ -30,6 +28,9 @@ const ProductItem: FC<ProductItemProps> = (props) => {
                     id={props.id}
                     title={props.title}
                     price={props.price}
+                    article={props.article}
+                    category={props.category}
+                    info={props.info}
                     salePrice={props.salePrice}
                     type={props.type}
                     imgSrc={props.imgSrc}

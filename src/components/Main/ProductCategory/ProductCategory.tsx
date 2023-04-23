@@ -3,6 +3,7 @@ import classes from './ProductCategory.module.css'
 import mainSection from '../MainSection.module.css'
 import ProductItem, {ProductItemProps} from "../ProductItem/ProductItem";
 import GoToTopOfPage from "../../UIcomponents/GoToTopOfPage";
+import {DataType} from "../Sensor/Sensor";
 
 interface TypeProps {
     title?: string,
@@ -14,9 +15,10 @@ const getData = async () => {
     const data = await fetch('../../../src/consts/data.json')
     return data.json()
 }
-let DATA:any = []
+
 const ProductCategory: FC<TypeProps> = (props) => {
-    const [items, setItems] = useState<ProductItemProps[]>([]);
+    const [DATA, setDATA] = useState<DataType[]>([]);
+    const [items, setItems] = useState<any>([]);
     const [pageQty, setPageQty] = useState(0);
     const [currPage, setCurrPage] = useState<number>(1);
     const pages = []
@@ -37,22 +39,23 @@ const ProductCategory: FC<TypeProps> = (props) => {
     }
     const nextPageHandler = () => {
         setCurrPage(prevState => prevState + 1)
-        onPageHandler()
     }
     const prevPageHandler = () => {
         setCurrPage(prevState => prevState - 1)
-        onPageHandler()
     }
     for(let i = 1; i <= pageQty; i++){
         pages.push(i)
     }
 
     useEffect(() => {
+        onPageHandler()
+    }, [currPage, DATA]);
+
+    useEffect(() => {
         getData()
             .then(res => {
-                DATA = res
+                setDATA(res)
                 setPageQty(Math.ceil(res.length / pageSize))
-                onPageHandler()
             })
     }, []);
 
@@ -71,7 +74,7 @@ const ProductCategory: FC<TypeProps> = (props) => {
                 </select>
                 <div className={classes.itemsWrapper}>
                     {
-                        items.map(item =>
+                        items.map((item:any) =>
                             <ProductItem key={item.id}
                                          id={item.id}
                                          title={item.title}

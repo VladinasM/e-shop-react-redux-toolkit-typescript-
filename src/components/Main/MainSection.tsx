@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
 import Slider from "./Slider/Slider";
-import Divan from "./Divans/Divan";
-import DivanTwoInRow from "./Divans/DivanTwoInRow";
-import Chairs from "./Chairs/Chairs";
-import Lamps from "./Lamps/Lamps";
+import Sensor from "./Sensor/Sensor";
+import SensorTwoInRow from "./Sensor/SensorTwoInRow";
+import VentSystem from "./VentSystem/VentSystem";
+import Ventilator from "./Ventilator/Ventilator";
 import classes from './MainSection.module.css'
 import DetailsPopup from "./DetailsPopup/DetailsPopup";
 
@@ -12,11 +12,11 @@ const MainSection = () => {
     return (
         <main className={classes.mainSection}>
             <Slider/>
-            <Divan/>
-            {/*<DivanTwoInRow/>*/}
-            <Chairs />
-            <Lamps/>
-            <DetailsPopup/>
+            <Sensor/>
+            {/*<SensorTwoInRow/>*/}
+            <VentSystem />
+            <Ventilator/>
+
         </main>
     );
 };

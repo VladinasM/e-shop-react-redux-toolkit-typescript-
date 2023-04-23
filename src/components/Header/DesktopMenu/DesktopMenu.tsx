@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./DesktopMenu.module.css";
 import {NavLink} from "react-router-dom";
-import {BLOG, CHAIRS, DIVANS, PAYMENTS, SHOP} from "../../../consts/consts";
+import {BLOG, VENT_SYSTEM, SENSOR, PAYMENTS, SHOP} from "../../../consts/consts";
 
 const DesktopMenu = () => {
     return (
@@ -11,10 +11,10 @@ const DesktopMenu = () => {
                     <NavLink className={classes.linkToSubMenu + ' ' + classes.arrow} to={SHOP} end>Магазин</NavLink>
                     <ul className={classes.subMenuList}>
                         <li>
-                            <NavLink to={DIVANS}>Диваны</NavLink>
+                            <NavLink to={SENSOR}>Датчики</NavLink>
                         </li>
                         <li>
-                            <NavLink to={CHAIRS}>Стулья</NavLink>
+                            <NavLink to={VENT_SYSTEM}>Вентиляторы</NavLink>
                         </li>
                     </ul>
                 </li>

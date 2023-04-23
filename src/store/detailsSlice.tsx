@@ -13,12 +13,13 @@ const initialState: InitialType = {
         title: '',
         price: 0,
         salePrice: 0,
-        type: '',
         imgSrc: '',
-        variants: 0,
         badgeText: '',
         itemAmount: 1,
-        sum: 0
+        sum: 0,
+        info: '',
+        article: '',
+        category: ''
     }
 }
 const detailsSlice = createSlice({
@@ -34,11 +35,12 @@ const detailsSlice = createSlice({
                 title: item.title,
                 price: item.price,
                 salePrice: item.salePrice,
-                type: item.type,
+                article: item.article,
                 imgSrc: item.imgSrc,
-                variants: item.variants,
+                category: item.category,
                 badgeText: item.badgeText,
-                itemAmount: 1
+                itemAmount: 1,
+                info: item.info
             }
 
         },

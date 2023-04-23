@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Датчик влажности и температуры канальный THS-02-240 (0-10В 240мм)",
+    "article": "datchik-vlazhnosti-i-temperatury-kanalnyj-ths-02-240-0-10v-240mm",
+    "price": 26400,
+    "salePrice": 19800,
+    "category": "Датчик температуры",
+    "imgSrc": "/src/assets/images/sensor/datchik-vlazhnosti-i-temperaturi-kanalnij-rgp-ths-02-240-500x500-1.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 2,
+    "title": "Датчик температуры наружного воздуха TS-E01 ECO (NTC10k3950) IP54",
+    "article": "datchik-temperatury-naruzhnogo-vozduha-ts-e01-eco-ntc10k3950-ip54",
+    "price": 2687,
+    "salePrice": 2015,
+    "category": "Датчик температуры",
+    "imgSrc": "/src/assets/images/sensor/datchik-temperaturi-naruzhnego-vozduha-rgp-ts-e01-eco-korpus-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 3,
+    "title": "Регулятор симисторный MTY-2,5А (2,5А, 220В)",
+    "article": " regulyator-simistornyj-mty-25a-25a-220v",
+    "price": 2482,
+    "salePrice": 1861,
+    "category": "Регуляторы симисторные",
+    "imgSrc": "/src/assets/images/sensor/simistornij-regulator-skorosti-mty-2-5-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 4,
+    "title": "Датчик температуры накладной TU-00 ECO NTC10k(3950)",
+    "article": "datchik-temperatury-nakladnoj-tu-00-eco-ntc10k3950",
+    "price": 1466,
+    "salePrice": 1099,
+    "category": "Датчик температуры",
+    "imgSrc": "/src/assets/images/sensor/datchik-temperaturi-nakladnoj-tu-00-eco-rgp-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 5,
+    "title": "Датчик температуры Наружного воздуха TS-E01 ECO PT1000 (IP54)",
+    "article": "datchik-temperatury-naruzhnogo-vozduha-ts-e01-eco-pt1000-ip54",
+    "price": 1440,
+    "salePrice": 1080,
+    "category": "Датчик температуры",
+    "imgSrc": "/src/assets/images/sensor/datchik-temperaturi-naruzhnego-vozduha-rgp-ts-e01-eco-korpus-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 6,
+    "title": "Регулятор симисторный MTY-1,5А (1,5А 220В)",
+    "article": "regulyator-simistornyj-mty-15a-15a-220v",
+    "price": 2292,
+    "salePrice": 1719,
+    "category": "Регуляторы симисторные",
+    "imgSrc": "/src/assets/images/sensor/simistornij-regulator-skorosti-mty-1-5-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 7,
+    "title": "Датчик температуры Наружного воздуха TS-E01 ECO NTC10k (IP54)",
+    "article": "datchik-temperatury-naruzhnogo-vozduha-ts-e01-eco-ntc10k-ip54",
+    "price": 1056,
+    "salePrice": 792,
+    "category": "Датчик температуры",
+    "imgSrc": "/src/assets/images/sensor/datchik-temperaturi-naruzhnego-vozduha-rgp-ts-e01-eco-korpus-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  },
+  {
+    "id": 8,
+    "title": "Датчик температуры канальный RTSensor (PT1000)",
+    "article": "datchik-temperatury-kanalnyj-rtsensor-pt1000",
+    "price": 929,
+    "salePrice": 696,
+    "category": "Датчик температуры",
+    "imgSrc": "/src/assets/images/sensor/datchik-temperaturi-rtsensor-pt1000-3-500x500-1-300x300.jpg",
+    "badgeText": "Sale"
+  }
+]

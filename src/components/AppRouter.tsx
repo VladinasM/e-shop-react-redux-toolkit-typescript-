@@ -13,10 +13,10 @@ import Shop from "./Main/Shop/Shop";
 import {
     BLOG,
     CART,
-    CHAIRS,
+    VENT_SYSTEM,
     COMPARE,
-    DIVANS, FAQ,
-    FAVOURITES, LAMPS, LOST_PASSWORD,
+    SENSOR, FAQ,
+    FAVOURITES, VENTILATOR, LOST_PASSWORD,
     OFERTA,
     PAYMENTS,
     PRODUCT_CATEGORY, PROFILE,
@@ -35,9 +35,9 @@ export const router = createBrowserRouter(
                 <Route path={FAVOURITES} element={<Favourites />}/>
                 <Route path={SHOP} element={<ProductCategory />}/>
                 <Route path={PRODUCT_CATEGORY}>
-                    <Route path={DIVANS} element={<ProductCategory />}/>
-                    <Route path={CHAIRS} element={<ProductCategory />}/>
-                    <Route path={LAMPS} element={<ProductCategory />}/>
+                    <Route path={SENSOR} element={<ProductCategory />}/>
+                    <Route path={VENT_SYSTEM} element={<ProductCategory />}/>
+                    <Route path={VENTILATOR} element={<ProductCategory />}/>
                 </Route>
                 <Route path={COMPARE} element={<Compare />}/>
                 <Route path={PAYMENTS} element={<Payments />}/>

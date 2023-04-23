@@ -6,7 +6,7 @@ import {compareSliceActions} from "../../../../store/compareSlice";
 import {ProductItemProps} from "../ProductItem";
 import {detailsSliceActions} from "../../../../store/detailsSlice";
 
-const FavouritesSection:FC<ProductItemProps> = (props) => {
+const FavouritesSection = (props:any) => {
     const dispatch = useAppDispatch()
     const item = {...props}
     const onToggleFavourites = () => {
